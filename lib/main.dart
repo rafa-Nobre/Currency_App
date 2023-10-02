@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'common/utils.dart' as utils;
 
 void main() {
   runApp(const MyApp());
@@ -15,26 +16,25 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Home(),
+      home: const HomePage(),
     );
   }
 }
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _HomeState extends State<Home> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         ),
-        body: const Placeholder() // This trailing comma makes auto-formatting nicer for build methods.
-        );
+        body: const Placeholder());
   }
 }
